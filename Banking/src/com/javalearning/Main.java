@@ -20,8 +20,8 @@ public class Main {
         bank.addCustomerTransaction("Punjab","Rakesh",12000);
         bank.addCustomerTransaction("Punjab","Rakesh",3500);
 
-        bank.listCustomer("Punjab",true);
-        bank.listCustomer("Karnataka ",true);
+        bank.listCustomers("Punjab",true);
+        bank.listCustomers("Karnataka ",true);
 
         if(!bank.addCustomer("Goa","Tim",4500.0)) {
             System.out.println("Error Goa branch does not exist");
@@ -31,7 +31,7 @@ public class Main {
         if(!bank.addCustomer("Goa","Tim",4500.0)) {
             System.out.println("Error Goa branch does not exist");
         }
-        bank.listCustomer("Goa",false);
+        bank.listCustomers("Goa",false);
 
         if(!bank.addBranch("Goa")) {
             System.out.println("Goa branch already exists");

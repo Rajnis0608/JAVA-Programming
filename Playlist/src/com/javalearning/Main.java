@@ -138,7 +138,7 @@ public class Main {
                         if(listIterator.hasNext()) {
                             System.out.println("Now playing " + listIterator.next());
                         }
-                        else (listIterator.hasPrevious()) {
+                        else if(listIterator.hasPrevious()) {
                             System.out.println("Now playing " + listIterator.previous());
                         }
                     }

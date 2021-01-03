@@ -41,6 +41,8 @@ public class Album {
         }
     }
 
+    //Inner class
+
     private class SongList {
         private ArrayList<Song> songs;
 

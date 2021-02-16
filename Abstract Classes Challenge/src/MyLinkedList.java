@@ -49,7 +49,7 @@ public class MyLinkedList implements NodeList {
 
             else {
                 //equal
-                System.out.println(newItem.getValue() + " is already present , not added.");
+                //System.out.println(newItem.getValue() + " is already present , not added.");
                 return false;
             }
         }
@@ -60,30 +60,28 @@ public class MyLinkedList implements NodeList {
     @Override
     public boolean removeItem(ListItem item) {
         if(item != null) {
-            System.out.println("Deleting item " + item.getValue());
-        }
-
-        ListItem currentItem = this.root;
-        while (currentItem != null) {
-            int comparison = currentItem.compareTo(item);
-            if(comparison == 0) {
-               //found item to delete
-               if(currentItem == this.root) {
-                   this.root = currentItem.next();
-               } else {
-                   currentItem.previous().setNext(currentItem.next());
-                   if(currentItem.next() != null) {
-                       currentItem.next().setPrevious(currentItem.previous());
-                   }
-               }
-               return true;
-            }
-            else if(comparison < 0) {
-                 currentItem = currentItem.next();
-            } else {
-                //We are at an item greater than one to be deleted
-                //so the item is not in the list
-                return false;
+            //System.out.println("Deleting item " + item.getValue());
+            ListItem currentItem = this.root;
+            while (currentItem != null) {
+                int comparison = currentItem.compareTo(item);
+                if (comparison == 0) {
+                    //found item to delete
+                    if (currentItem == this.root) {
+                        this.root = currentItem.next();
+                    } else {
+                        currentItem.previous().setNext(currentItem.next());
+                        if (currentItem.next() != null) {
+                            currentItem.next().setPrevious(currentItem.previous());
+                        }
+                    }
+                    return true;
+                } else if (comparison < 0) {
+                    currentItem = currentItem.next();
+                } else {
+                    //We are at an item greater than one to be deleted
+                    //so the item is not in the list
+                    return false;
+                }
             }
         }
         // we have reached the end of the list
@@ -94,7 +92,7 @@ public class MyLinkedList implements NodeList {
     @Override
     public void tranverse(ListItem root) {
         if(root == null) {
-            System.out.println("This list is empty");
+            System.out.println("The list is empty");
         } else {
             while (root != null) {
                 System.out.println(root.getValue());

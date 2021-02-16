@@ -49,7 +49,7 @@ public class SearchTree implements NodeList {
 
             else {
                 //equal, so don't add
-                System.out.println(newItem.getValue() + " is already present , not added.");
+                //System.out.println(newItem.getValue() + " is already present , not added.");
                 return false;
             }
         }
@@ -60,22 +60,23 @@ public class SearchTree implements NodeList {
     @Override
     public boolean removeItem(ListItem item) {
         if(item != null) {
-            System.out.println("Deleting item " + item.getValue());
-        }
-        ListItem currentItem = this.root;
-        ListItem parentItem = currentItem;
+            //System.out.println("Deleting item " + item.getValue());
 
-        while (currentItem != null) {
-            int comparison = currentItem.compareTo(item);
-            if(comparison<0) {
-                parentItem = currentItem;
-                currentItem = currentItem.next();
-            } else if(comparison > 0) {
-                parentItem = currentItem;
-                currentItem = currentItem.previous();
-            } else {
-                performRemoval(currentItem,parentItem);
-                return true;
+            ListItem currentItem = this.root;
+            ListItem parentItem = currentItem;
+
+            while (currentItem != null) {
+                int comparison = currentItem.compareTo(item);
+                if (comparison < 0) {
+                    parentItem = currentItem;
+                    currentItem = currentItem.next();
+                } else if (comparison > 0) {
+                    parentItem = currentItem;
+                    currentItem = currentItem.previous();
+                } else {
+                    performRemoval(currentItem, parentItem);
+                    return true;
+                }
             }
         }
         return false;

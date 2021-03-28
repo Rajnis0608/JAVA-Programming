@@ -10,9 +10,7 @@ public class Main {
     public static void main(String[] args) {
 	// write your code here
         Scanner scanner = new Scanner(System.in);
-
-
-
+        
         Map<String,Integer> tempExit = new HashMap<String, Integer>();
         locations.put(0,new Location(0,"You are sitting in front of a computer learning Java",tempExit));
 

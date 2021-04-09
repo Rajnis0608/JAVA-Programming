@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Buttons and Labels.iml" filepath="$PROJECT_DIR$/Buttons and Labels.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Controls.iml" filepath="$PROJECT_DIR$/Controls.iml" />
     </modules>
   </component>
 </project>

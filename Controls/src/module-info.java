@@ -1,4 +1,4 @@
-module Buttons.and.Labels {
+module Controls {
     requires javafx.controls;
     requires javafx.fxml;
     requires jlfgr;

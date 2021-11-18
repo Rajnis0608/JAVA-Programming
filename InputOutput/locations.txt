@@ -4,3 +4,4 @@
 3,You are inside a building
 4,You are in a valley beside a stream
 5,You are in the forest
+6,You are in your room
